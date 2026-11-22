@@ -162,4 +162,15 @@ $("orderForm").addEventListener("submit",e=>{
 });
 renderPackages();renderCart();
 </script>
+ ‏<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+‏<script>
+const SUPABASE_URL = 'https://lskfpejsknlvyzatyxyq.supabase.co/rest/v1/';
+const SUPABASE_KEY = 'sb_publishable_oo7-xDdFXLAnXXqkYx_pcA_2jTRx7qS';
+‏const supabaseClient = window.supabase.createClient(
+‏SUPABASE_URL,
+‏SUPABASE_KEY
+);
+‏console.log('Teva Store connected to Supabase');
+‏</script>
+
 </body></html>
