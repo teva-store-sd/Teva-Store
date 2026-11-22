@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#061426">
+<title>Teva Store | متجر شحن فري فاير</title>
+<style>
+:root{--bg:#050d19;--panel:#0b1a2d;--panel2:#10243d;--blue:#168cff;--cyan:#55c8ff;--white:#f5f9ff;--muted:#9db1c9;--line:#1d3856;--green:#42d69a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 85% -5%,#123e6b 0,transparent 32%),radial-gradient(ellipse at 0% 40%,#0a2140 0,transparent 27%),var(--bg);color:var(--white);font-family:system-ui,-apple-system,"Segoe UI",Tahoma,Arial,sans-serif}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}.container{width:min(1120px,92%);margin:auto}
+.topbar{border-bottom:1px solid #ffffff12;background:#061426c9;backdrop-filter:blur(12px);position:sticky;top:0;z-index:10}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{font-size:1.42rem;font-weight:950;letter-spacing:.5px}.brand span{color:var(--cyan)}.brand small{display:block;font-size:.62rem;letter-spacing:2.5px;color:var(--muted);font-weight:650;margin-top:-3px}
+.navlinks{display:flex;gap:24px;color:#c1d2e5;font-size:.92rem}.navlinks a:hover{color:var(--cyan)}
+.nav-actions{display:flex;gap:9px;align-items:center}.cartbtn,.menuBtn{background:#10243b;border:1px solid #2b4c6c;color:#e9f6ff;border-radius:12px;padding:10px 13px;cursor:pointer}.count{background:var(--blue);border-radius:20px;padding:1px 7px;margin-right:5px;font-size:.8rem}
+.primary{border:0;background:linear-gradient(100deg,#0878ed,#21b4ff);color:white;border-radius:13px;padding:13px 18px;font-weight:850;cursor:pointer;box-shadow:0 8px 24px #0878ed33}.primary:hover{filter:brightness(1.12);transform:translateY(-1px)}
+.secondary{background:#10243b;border:1px solid #2a4d70;color:#dceeff;border-radius:12px;padding:11px 15px;cursor:pointer;font-weight:750}
+.hero{padding:64px 0 44px;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+.tag{display:inline-flex;align-items:center;gap:8px;border:1px solid #28618f;background:#0b2440;color:#9fddff;padding:8px 13px;border-radius:30px;font-size:.82rem;font-weight:750}
+.dot{width:7px;height:7px;background:#35d49b;border-radius:50%;box-shadow:0 0 12px #35d49b}
+h1{font-size:clamp(2.35rem,5.4vw,4.4rem);line-height:1.12;letter-spacing:-1.7px;margin:20px 0 15px;font-weight:950}
+.gradient{background:linear-gradient(90deg,#6bd5ff,#168cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--muted);line-height:2;max-width:590px;font-size:1.04rem}
+.heroBtns{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.heroNote{font-size:.8rem;color:#829bb7;margin-top:15px}
+.visual{position:relative;min-height:350px;border:1px solid #27547b;border-radius:30px;overflow:hidden;background:radial-gradient(circle at 50% 43%,#145a9a 0,#0b2a4b 30%,#081629 72%);display:grid;place-items:center;box-shadow:0 24px 80px #0007}
+.visual:before,.visual:after{content:"";position:absolute;border:1px solid #4aaeff33;border-radius:50%;width:280px;height:280px}.visual:after{width:390px;height:390px}
+.orb{font-size:8rem;filter:drop-shadow(0 0 25px #39aaff);z-index:1;animation:float 4s ease-in-out infinite}
+.visualLabel{position:absolute;bottom:25px;text-align:center;z-index:2}.visualLabel strong{display:block;font-size:1.5rem;letter-spacing:2px}.visualLabel span{color:#9bc9ed;font-size:.78rem;letter-spacing:3px}
+.floatBadge{position:absolute;z-index:2;top:28px;right:24px;background:#06182bd9;border:1px solid #3575a9;padding:10px 13px;border-radius:12px;color:#c8eaff;font-size:.83rem}
+@keyframes float{50%{transform:translateY(-12px)}}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:5px 0 50px}
+.feature{display:flex;align-items:center;gap:13px;background:#0a1a2d;border:1px solid var(--line);border-radius:16px;padding:17px}.featureIcon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:#0d3154;font-size:1.3rem}.feature strong{display:block;font-size:.95rem}.feature small{color:var(--muted)}
+section{padding:34px 0 42px}.sectionHead{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.eyebrow{color:var(--cyan);font-weight:850;font-size:.82rem;letter-spacing:.4px}.sectionHead h2{margin:5px 0 0;font-size:clamp(1.6rem,3vw,2.2rem)}.sectionHead p{color:var(--muted);margin:6px 0 0;font-size:.9rem}
+.packages{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.pack{background:linear-gradient(155deg,#102641,#091729);border:1px solid #1d3a59;border-radius:20px;padding:20px;position:relative;overflow:hidden;transition:.2s}
+.pack:hover{transform:translateY(-4px);border-color:#287bc0;box-shadow:0 15px 35px #0004}
+.packTop{display:flex;align-items:center;justify-content:space-between}.gem{font-size:2rem;filter:drop-shadow(0 0 10px #2b9eff)}.soon{font-size:.72rem;color:#9bdcff;background:#0c3153;border:1px solid #245b86;padding:5px 9px;border-radius:30px}
+.pack h3{font-size:1.25rem;margin:14px 0 4px}.pack p{margin:0;color:var(--muted);font-size:.86rem}.packBottom{display:flex;align-items:center;justify-content:space-between;border-top:1px solid #ffffff12;margin-top:18px;padding-top:15px}.packBottom strong{color:#8ddaff}.packBottom button{padding:9px 12px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.step{background:#0a192b;border:1px solid var(--line);border-radius:17px;padding:18px}.stepNum{width:31px;height:31px;border-radius:10px;background:#0d3b68;color:#9bdcff;display:grid;place-items:center;font-weight:900}.step h3{font-size:1rem;margin:13px 0 6px}.step p{color:var(--muted);font-size:.85rem;line-height:1.8;margin:0}
+.orderBox{display:grid;grid-template-columns:1.1fr .9fr;gap:17px}.panel{background:linear-gradient(150deg,#0d2036,#081525);border:1px solid var(--line);border-radius:20px;padding:23px}
+.panel h3{margin:0 0 18px;font-size:1.2rem}.formGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}label{font-size:.88rem;color:#c6d8eb}input,select,textarea{background:#061323;border:1px solid #294968;color:white;border-radius:11px;padding:13px;width:100%;outline:none}input:focus,select:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px #168cff20}
+.hint{font-size:.77rem;color:#8199b3;line-height:1.7}.orderSummary{background:#08192b;border:1px solid #214361;border-radius:15px;padding:17px;margin-top:15px}.sumrow{display:flex;justify-content:space-between;gap:12px;padding:8px 0;color:#b7c9dc;font-size:.9rem}.sumrow.total{border-top:1px solid #ffffff18;margin-top:5px;padding-top:13px;color:white;font-weight:850}.noPrice{color:#7fd1ff}
+.infoList{display:grid;gap:12px}.infoItem{display:flex;gap:11px;align-items:flex-start;color:#c4d7e9;font-size:.9rem;line-height:1.8}.check{color:var(--green);font-weight:900}.warning{margin-top:16px;border:1px solid #2b567c;background:#0a2440;color:#b8dcf6;border-radius:13px;padding:13px;font-size:.82rem;line-height:1.8}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:13px}.faq details{background:#0a192b;border:1px solid var(--line);border-radius:14px;padding:15px 17px}.faq summary{cursor:pointer;font-weight:800}.faq p{color:var(--muted);line-height:1.8;font-size:.88rem;margin-bottom:0}
+footer{border-top:1px solid #ffffff14;padding:30px 0 35px;margin-top:20px;color:#849bb5;font-size:.84rem;line-height:1.9}.footerRow{display:flex;justify-content:space-between;gap:20px;align-items:center}.footerBrand{font-weight:950;color:white;font-size:1.2rem}.footerBrand span{color:var(--cyan)}
+.drawer{position:fixed;inset:0;background:#0009;z-index:30;display:none;justify-content:flex-start}.drawer.open{display:flex}.drawerPanel{width:min(420px,92vw);background:#08182a;border-left:1px solid #294967;padding:22px;overflow:auto}.drawerHead{display:flex;justify-content:space-between;align-items:center}.close{background:#142b43;border:1px solid #31516f;color:white;border-radius:10px;padding:7px 11px;cursor:pointer}.cartLine{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #ffffff14;padding:14px 0}.cartLine small{display:block;color:var(--muted);margin-top:4px}.remove{background:none;border:0;color:#ff9b9b;cursor:pointer}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#123456;border:1px solid #3678ac;color:#e8f7ff;padding:12px 17px;border-radius:12px;z-index:50;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
+.mobileOnly{display:none}
+@media(max-width:800px){.navlinks{display:none}.mobileOnly{display:inline-block}.hero{grid-template-columns:1fr;padding-top:42px}.visual{min-height:280px}.features{grid-template-columns:1fr}.packages{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.orderBox{grid-template-columns:1fr}}
+@media(max-width:520px){.nav{height:66px}.brand{font-size:1.2rem}.nav-actions .primary{display:none}.hero{padding-bottom:25px}.visual{min-height:240px}.orb{font-size:6rem}.packages{grid-template-columns:1fr}.sectionHead{align-items:flex-start;flex-direction:column}.steps,.faq{grid-template-columns:1fr}.formGrid{grid-template-columns:1fr}.field.full{grid-column:auto}.footerRow{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="container nav">
+ <a class="brand" href="#">TEVA <span>STORE</span><small>FREE FIRE TOP UP</small></a>
+ <nav class="navlinks"><a href="#packages">الباقات</a><a href="#how">كيف تطلب؟</a><a href="#order">اطلب الآن</a><a href="#faq">الأسئلة</a></nav>
+ <div class="nav-actions"><button class="cartbtn" id="openCart">🛒 الطلبات <span class="count" id="cartCount">0</span></button><a class="primary" href="#order">ابدأ طلبك</a></div>
+</div></div>
+<main class="container">
+<section class="hero">
+ <div><span class="tag"><i class="dot"></i> متجر طلبات شحن فري فاير</span>
+ <h1>جواهرك أقرب<br><span class="gradient">من أي وقت 💎</span></h1>
+ <p>أهلاً بيك في Teva Store. اختار باقتك، أضفها لطلبك، وأرسل بيانات الشحن مباشرة عبر واتساب. الأسعار وتفاصيل الدفع سيتم الإعلان عنها قريباً.</p>
+ <div class="heroBtns"><a class="primary" href="#packages">تصفح الباقات　←</a><a class="secondary" href="#how">كيف أطلب؟</a></div>
+ <div class="heroNote">لا تحتاج لمشاركة كلمة مرور حسابك أو رمز التحقق.</div></div>
+ <div class="visual"><div class="floatBadge">💠 شحن عبر UID</div><div class="orb">💎</div><div class="visualLabel"><strong>TEVA STORE</strong><span>DIAMONDS • TOP UP</span></div></div>
+</section>
+<div class="features">
+ <div class="feature"><div class="featureIcon">⚡</div><div><strong>طلب سهل</strong><small>خطوات بسيطة من تلفونك</small></div></div>
+ <div class="feature"><div class="featureIcon">🔒</div><div><strong>خصوصية حسابك</strong><small>لا تطلب كلمة المرور</small></div></div>
+ <div class="feature"><div class="featureIcon">💬</div><div><strong>تواصل مباشر</strong><small>تأكيد الطلب عبر واتساب</small></div></div>
+</div>
+
+<section id="packages">
+ <div class="sectionHead"><div><span class="eyebrow">اختار الباقة المناسبة</span><h2>باقات الجواهر</h2><p>الأسعار ستظهر بعد اعتماد المورد وتأكيد تكلفة الشحن.</p></div><span class="tag">الأسعار: قريباً</span></div>
+ <div class="packages" id="packageGrid"></div>
+</section>
+
+<section id="how">
+ <div class="sectionHead"><div><span class="eyebrow">طريقة الطلب</span><h2>كيف تشحن معانا؟</h2></div></div>
+ <div class="steps">
+  <div class="step"><div class="stepNum">1</div><h3>اختار الباقة</h3><p>حدد كمية الجواهر المناسبة ليك وأضفها للطلب.</p></div>
+  <div class="step"><div class="stepNum">2</div><h3>أدخل UID</h3><p>اكتب رقم اللاعب بدقة، وتأكد من بيانات الحساب.</p></div>
+  <div class="step"><div class="stepNum">3</div><h3>أرسل الطلب</h3><p>اضغط إرسال عبر واتساب لمراجعة الطلب والتكلفة.</p></div>
+  <div class="step"><div class="stepNum">4</div><h3>أكد الدفع</h3><p>انتظر تأكيد المتجر وطريقة الدفع قبل تحويل أي مبلغ.</p></div>
+ </div>
+</section>
+
+<section id="order">
+ <div class="sectionHead"><div><span class="eyebrow">جاهز للطلب؟</span><h2>أرسل طلب الشحن</h2><p>املأ البيانات وسنجهز لك رسالة واتساب بالتفاصيل.</p></div></div>
+ <div class="orderBox">
+  <div class="panel">
+   <h3>بيانات اللاعب والطلب</h3>
+   <form id="orderForm" class="formGrid">
+    <div class="field full"><label for="uid">رقم اللاعب UID *</label><input id="uid" required inputmode="numeric" pattern="[0-9]{5,20}" placeholder="مثال: 123456789"><span class="hint">تأكد من الرقم قبل الإرسال. لا ترسل كلمة المرور.</span></div>
+    <div class="field"><label for="player">اسم اللاعب (اختياري)</label><input id="player" placeholder="اسمك داخل اللعبة"></div>
+    <div class="field"><label for="currency">العملة المفضلة</label><select id="currency"><option value="الجنيه السوداني">الجنيه السوداني (SDG)</option><option value="الدولار الأمريكي">الدولار الأمريكي (USD)</option></select></div>
+    <div class="field full"><label for="note">ملاحظات (اختياري)</label><textarea id="note" rows="2" placeholder="أي تفاصيل إضافية..."></textarea></div>
+    <div class="field full"><button class="primary" type="submit">إرسال الطلب عبر واتساب　↗</button></div>
+   </form>
+  </div>
+  <aside class="panel"><h3>ملخص طلبك</h3><div id="summaryItems" class="muted">ما أضفت أي باقة لسه.</div>
+   <div class="orderSummary"><div class="sumrow"><span>عدد الباقات</span><strong id="sumCount">0</strong></div><div class="sumrow"><span>العملة المفضلة</span><strong id="sumCurrency">الجنيه السوداني</strong></div><div class="sumrow total"><span>السعر</span><strong class="noPrice">يتم التأكيد عبر واتساب</strong></div></div>
+   <div class="warning">تنبيه أمان: لا تشارك كلمة مرورك أو رمز التحقق. لا تحول أي مبلغ قبل استلام تفاصيل الطلب وتأكيدها من المتجر.</div>
+  </aside>
+ </div>
+</section>
+
+<section id="faq">
+ <div class="sectionHead"><div><span class="eyebrow">معلومات مهمة</span><h2>الأسئلة الشائعة</h2></div></div>
+ <div class="faq">
+  <details><summary>هل الأسعار متاحة حالياً؟</summary><p>لسه بنجهز المتجر ونتأكد من المورد وتكلفة الشحن. الأسعار ستُضاف بعد ذلك.</p></details>
+  <details><summary>هل الشحن تلقائي؟</summary><p>حالياً الطلبات تُراجع يدوياً عبر واتساب. الشحن التلقائي يحتاج تكامل رسمي أو مورد يوفر API.</p></details>
+  <details><summary>هل أحتاج أرسل كلمة المرور؟</summary><p>لا. لا تشارك كلمة المرور أو رمز التحقق. استخدم UID فقط عندما تكون طريقة المورد تدعم الشحن بالـ UID.</p></details>
+  <details><summary>هل المتجر تابع لغارينا؟</summary><p>لا، Teva Store متجر مستقل لاستقبال طلبات الشحن وليس موقعاً رسمياً أو تابعاً لشركة Garena.</p></details>
+ </div>
+</section>
+</main>
+<footer><div class="container footerRow"><div><div class="footerBrand">TEVA <span>STORE</span></div><div>متجر مستقل لطلبات شحن Free Fire.</div></div><div>واتساب الطلبات: +249 990 217 590<br>© Teva Store — جميع الحقوق محفوظة</div></div></footer>
+<div class="drawer" id="drawer"><div class="drawerPanel"><div class="drawerHead"><h3>قائمة طلباتك</h3><button class="close" id="closeCart">إغلاق ✕</button></div><div id="cartLines"></div><p class="hint">السعر النهائي سيتم تأكيده يدوياً عبر واتساب.</p><a class="primary" style="display:block;text-align:center;margin-top:18px" href="#order" id="goOrder">أكمل الطلب</a></div></div>
+<div class="toast" id="toast"></div>
+<script>
+const WHATSAPP_NUMBER = "249990217590";
+const PACKAGES = [
+ {id:"p1",amount:100,label:"100 جوهرة",desc:"باقة بداية"},
+ {id:"p2",amount:310,label:"310 جوهرة",desc:"باقة صغيرة"},
+ {id:"p3",amount:520,label:"520 جوهرة",desc:"باقة متوسطة"},
+ {id:"p4",amount:1060,label:"1,060 جوهرة",desc:"باقة مميزة"},
+ {id:"p5",amount:2180,label:"2,180 جوهرة",desc:"باقة كبيرة"},
+ {id:"p6",amount:5600,label:"5,600 جوهرة",desc:"باقة ضخمة"}
+];
+let cart=[];
+const $=id=>document.getElementById(id);
+function toast(s){$("toast").textContent=s;$("toast").classList.add("show");setTimeout(()=>$("toast").classList.remove("show"),2100)}
+function renderPackages(){
+ $("packageGrid").innerHTML=PACKAGES.map(p=>`<article class="pack"><div class="packTop"><span class="gem">💎</span><span class="soon">السعر قريباً</span></div><h3>${p.label}</h3><p>${p.desc}</p><div class="packBottom"><strong>يتم تحديد السعر لاحقاً</strong><button class="secondary" data-add="${p.id}">＋ أضف للطلب</button></div></article>`).join("");
+ $("packageGrid").querySelectorAll("[data-add]").forEach(b=>b.addEventListener("click",()=>addToCart(b.dataset.add)));
+}
+function addToCart(id){const p=PACKAGES.find(x=>x.id===id);const found=cart.find(x=>x.id===id);if(found)found.qty++;else cart.push({...p,qty:1});renderCart();toast("تمت إضافة "+p.label+" لطلبك");}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);renderCart()}
+function renderCart(){
+ $("cartCount").textContent=cart.reduce((n,x)=>n+x.qty,0);
+ $("sumCount").textContent=cart.reduce((n,x)=>n+x.qty,0);
+ $("summaryItems").innerHTML=cart.length?cart.map(x=>`<div class="sumrow"><span>${x.label} × ${x.qty}</span><strong>السعر قريباً</strong></div>`).join(""):"ما أضفت أي باقة لسه.";
+ $("cartLines").innerHTML=cart.length?cart.map(x=>`<div class="cartLine"><div><strong>${x.label}</strong><small>الكمية: ${x.qty}</small></div><button class="remove" data-remove="${x.id}">حذف</button></div>`).join(""):"<p class='muted'>سلة الطلبات فارغة.</p>";
+ $("cartLines").querySelectorAll("[data-remove]").forEach(b=>b.addEventListener("click",()=>removeItem(b.dataset.remove)));
+}
+$("openCart").addEventListener("click",()=>$("drawer").classList.add("open"));
+$("closeCart").addEventListener("click",()=>$("drawer").classList.remove("open"));
+$("drawer").addEventListener("click",e=>{if(e.target===$("drawer"))$("drawer").classList.remove("open")});
+$("goOrder").addEventListener("click",()=>$("drawer").classList.remove("open"));
+$("currency").addEventListener("change",e=>$("sumCurrency").textContent=e.target.value);
+$("orderForm").addEventListener("submit",e=>{
+ e.preventDefault();
+ if(!cart.length){toast("أضف باقة واحدة على الأقل أولاً");$("packages").scrollIntoView({behavior:"smooth"});return}
+ const uid=$("uid").value.trim(),player=$("player").value.trim(),currency=$("currency").value,note=$("note").value.trim();
+ const items=cart.map(x=>`${x.label} × ${x.qty}`).join("، ");
+ const msg=`طلب جديد من Teva Store\nUID: ${uid}\nاسم اللاعب: ${player||"غير محدد"}\nالباقات: ${items}\nالعملة المفضلة: ${currency}\nالسعر: يرجى تأكيد السعر\nملاحظات: ${note||"لا يوجد"}`;
+ window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank");
+});
+renderPackages();renderCart();
+</script>
+</body></html>
